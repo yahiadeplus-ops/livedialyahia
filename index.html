@@ -92,6 +92,7 @@ footer{padding:14px 28px;text-align:center;font-size:.7rem;color:rgba(255,255,25
             <button class="source-btn" id="btnSrc2" onclick="switchSource(2)">Source 2</button>
             <button class="source-btn" id="btnSrc3" onclick="switchSource(3)">Source 3</button>
             <button class="source-btn" id="btnSrc4" onclick="switchSource(4)">F1 7amed</button>
+            <button class="source-btn" id="btnSrc5" onclick="switchSource(5)">Source 5</button>
         </div>
 
         <div class="player-wrapper">
@@ -163,10 +164,11 @@ footer{padding:14px 28px;text-align:center;font-size:.7rem;color:rgba(255,255,25
     (function(){
         'use strict';
         var SOURCES = {
-            1: 'https://junkieembeds.pages.dev/embed/beinsportsmax-sa',
+            1: 'https://findleembeds.pages.dev/embed/beinsportsmax-sa',
             2: 'https://junkieembeds.pages.dev/embed/fox-usa',
             3: 'https://z1.depoooo.com/albaplayer/bein-2/',
-            4: 'https://junkieembeds.pages.dev/embed/sky-sports-f1'
+            4: 'https://junkieembeds.pages.dev/embed/sky-sports-f1',
+            5: 'https://junkieembeds.pages.dev/embed/beinsportsmax-sa'
         };
         var player = document.getElementById('player');
         var loader = document.getElementById('playerLoader');
@@ -176,7 +178,7 @@ footer{padding:14px 28px;text-align:center;font-size:.7rem;color:rgba(255,255,25
         });
 
         window.switchSource = function(num){
-            for(var i=1;i<=4;i++) document.getElementById('btnSrc'+i).classList.toggle('active',i===num);
+            for(var i=1;i<=5;i++) document.getElementById('btnSrc'+i).classList.toggle('active',i===num);
             loader.style.opacity='1'; loader.style.visibility='visible';
             setTimeout(function(){ loader.style.opacity='0'; loader.style.visibility='hidden'; },8000);
             player.src = SOURCES[num];
